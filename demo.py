@@ -77,7 +77,8 @@ if __name__ == '__main__':
     import gymnasium as gym
 
     # Create the environment
-    env = gym.make("InvertedPendulum-v5", render_mode="human")
+    # env = gym.make("InvertedPendulum-v5", render_mode="human")
+    env = gym.make('Humanoid-v5', ctrl_cost_weight=0.1, render_mode="human")
 
     # Reset the environment to start
     observation, info = env.reset()
